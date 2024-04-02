@@ -1,0 +1,30 @@
+@startuml
+'https://plantuml.com/object-diagram
+
+object Main
+object Player
+object Board
+object Field
+object Dice
+object propertyField
+object Building
+object Deed
+object ChanceCard
+object Deck
+
+
+
+Main *-- Board
+Board *-- Dice
+Board "1" *-- "2..6" Player: Player has
+Player o-- Deed
+Player "1" o-- "1..46" ChanceCard: ChanceCard has
+Field o-- Building
+Board *-- Deck
+Board "1" *-- "1..40 "Field: Field has
+Field o-- propertyField
+Building *-- Deed
+
+
+
+@enduml
