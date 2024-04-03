@@ -1,0 +1,192 @@
+@startuml
+class Main{
++ static void main(String[] args)
+}
+
+class Property
+{
+    - int serieID;
+}
+
+class Plot
+{
+
+}
+
+class Brewery
+{
+
+}
+
+class Business
+{
+
+}
+
+class ShippingLine
+{
+
+}
+
+class Prison
+{
+
+}
+
+class Tax
+{
+
+}
+
+class Parking
+{
+
+}
+
+class Visit
+{
+
+}
+
+class Start
+{
+
+}
+
+class Chance
+{
+
+}
+
+class Game{
+ - String name
+ - ArrayList<Player> players
+ - Player currentPlayer
+ - CardDeck cardDeck
+ - Board board
+ - Dice dice
+ 'utilities
+  - ArrayList<String> listOfActions
+  - String playerDataPath
+  - TextUI ui
+  - FileIO io
+  'Contructor
+ + Game(String name)
+ 'Methods
+ - void setup()
+ + void runDialog()
+ - void createPlayer(String name, int balance)
+ - void displayPlayers()
+  - loadPlayerData()
+ - void registerPlayers()
+ - void runGameLoop()
+ - void throwAndMove()
+ - void endGame()
+
+}
+
+class Player{
+- String name
+- Account account
+- ArrayList<Field> deeds
++ Player(String name, int startAmount)
++ int updatePosition(int value)
+- boolean startPassed()
++ boolean buyProperty(Field f)
++ boolean pay(int amount)
++ boolean pay(int amount, Player recipient)
++ void collect(int amount)
++ void recieve(int amount)
++ String toString()
++ String getName()
++ int getBalance()
+}
+class Account{
+- int balance
++ void deposit(int amount)
++ boolean withdraw(int amount)
++ int getBalance()
+}
+
+class FileIO{
++ ArrayList<String> readPlayerData(String path)
++ void saveData(ArrayList<Player> players, String path)
++ String[] readBoardData(String path, int length).
+}
+
+class TextUI{
+- Scanner scanner
++ void displayMsg(String s)
++ int promptNumeric(String msg)
++ String promptText(String msg)
++ int promptChoice(String msg, ArrayList<String> list)
+}
+
+class Field{
+- String label
+ - int ID
+ - int cost
+ - int income
+ - String option
+ + Field(ID, label, cost, income)
+ + String toString()
+ + String onLand(Player p)
+ + String processResponse(Player p)
+ # String onAccept(Player p)
+ # String onReject(Player p)
+}
+class Board{
+ - Field[] fields
+ + Board(String [] fields, String [] cards])
+ - void createFields(String [] data)
+ + Field getField(int id)
+}
+
+class CardDeck {
+- String[] carddata
+- ArrayList<Card> cards
++ CardDeck
++ CardDeck(String[] carddata)
++ Card getNext()
+}
+class Card{
+-String message
+-int income
+-int cost
+-String event
++Card(String message, int income, int cost, String event)
+}
+
+class Dice{
+ +boolean isDouble
+ -HashMap rollHistory
+ +int rollDiceSum()
+ }
+
+Game *-- TextUI
+Main *-- Game
+Game *-- Player
+Game *-- FileIO
+Player *-- Account
+Game *-- Board
+Board *-- Field
+Game *-- CardDeck
+CardDeck *-- Card
+Game *-- Dice
+Player *-- Card
+Player *-- Field
+Field <|-- Property
+Business <|-- Brewery
+Business <|-- ShippingLine
+Property <|-- Plot
+Property --|> Business
+Field <|-- Prison
+Prison <|-- Taxes
+Prison <|-- Parking
+Prison <|-- Visit
+Prison <|-- Start
+Prison <|-- Chance
+
+
+
+@enduml
