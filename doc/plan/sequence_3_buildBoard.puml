@@ -2,7 +2,7 @@
 'https://plantuml.com/sequence-diagram
 
 autonumber
-Main -> Game: setup
+Game -> Game: setup
 Game -> FileIO: String[] data = readBoardData("fields.csv")
 
 Game -> Board : new(data)

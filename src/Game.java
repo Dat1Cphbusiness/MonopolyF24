@@ -6,7 +6,7 @@ public class Game {
     private ArrayList<String> listOfActions;
     private TextUI ui;
     private FileIO io;
-    private String playerDataPath = "data/playerData_.csv";
+    private String playerDataPath = "data/playerData.csv";
 
 
     private int maxPlayers = 6;
