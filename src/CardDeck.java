@@ -3,9 +3,11 @@ import java.util.ArrayList;
 public class CardDeck{
     private String[] carddata;
     private ArrayList<Card> cards;
-    public CardDeck(String[] carddata, ArrayList<Card> cards){
+    public int counter = 0;
+    public CardDeck(String[] carddata){
         this.carddata = carddata;
-        this.cards = new ArrayList<Card>();
+
+
 
     }
 
@@ -17,13 +19,17 @@ public class CardDeck{
             int cost = Integer.parseInt(values[2]);
             String event = values[3];
             Card c = new Card(message, income, cost, event);
-
-
+            cards.add(c);
 
         }
     }
     public Card getNext(){
-        return null;
+        counter++;
+        if(counter > 100){
+            counter = 0;
+        }
+
+        return cards.get(counter);
     }
 
 }
