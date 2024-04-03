@@ -1,0 +1,27 @@
+Message, Income, Cost, Event
+
+Ryk frem til START, 4000, 0, reward
+Ryk frem til START, 4000, 0, reward
+Ryk tre felter tilbage, 0,0, move
+De modtager deres aktiebytte modtag 1000kr af banken, 1000, 0, reward
+Modtag udbytte af deres aktier, 1000, 0, reward
+Modtag udbytte af deres aktier, 1000, 0, reward
+De havde en række med elleve rigtige i tipning. Modtag kr 1000, 1000,0,reward
+Grundet dyrtiden har de fået gageforhøjelse. Modtag kr 1000, 1000, 0, reward
+De har solgt nogle gamle møbler på auktionen. Modtag 1000 kr af banken, 1000, 0, reward
+Kommunen har eftergivet et kvartals skat. Hæv i banken kr. 3000, 3000, 0, reward
+De modtager Matador-legatet for værdigt trængende på kr. 40.000. Ved værdigt trængende forstås at deres formue dvs. deres kontante penge + skøder + bygninger ikke overstiger kr 15.000, 40.000,0,reward
+De har fået en parkeringsbøde. Betal kr. 200 i bøde, 0, 200, payment
+De har været en tur i udlandet og haft for mange cigaretter med hjem. Betal told kr. 200, 0, 200, payment
+Betal kr. 200 for levering af 2 kasser øl, 0, 200, payment
+Betal for vognvask og smøring kr 300, 0, 300, payment
+De har købt 4 nye dæk til deres vogn. betal kr. 1000,0,1000,payment
+De har modtaget deres tandlægeregning. betal kr. 2000,0,2000,payment
+Betal kr. 3000 for reperation af deres vogn,0,3000,payment
+Betal kr. 3000 for reperation af deres vogn,0,3000,payment
+Betal deres bilforsikring - kr. 1000,0,1000,payment
+De har kørt frem for fuldt stop. Betal kr. 1000 i bøde,0,1000,payment
+
+
+
+

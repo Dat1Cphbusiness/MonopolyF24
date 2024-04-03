@@ -1,0 +1,21 @@
+ID, FieldType, Label, Cost, Income, SeriesID
+21, Parkering, Parkering, 0, 0,
+22, Plot, Trianglen, 4400kr, 350, 7
+23, chance, Prøv lykken,0,0, 0
+24,Plot,Østerbrogade,4400,350, 7
+25, Plot, Grønningen, 4800, 400, 7
+26, ShippingLine, GEDSER-ROSTOCK, 4000, 500, 2
+27, Plot, Bredgade, 5200, 450, 8
+28, Plot, Kgs. Nytorv, 5200, 450, 8
+29, Brewery, coca cola, 3000, 100, 5
+30, Plot, Østergade, 5600, 500, 8
+31, Prison, De fængles, 0, 0, 0
+32, Plot, Amagertorv, 6000, 550, 9
+33, Plot, Vimmelskaftet, 6000, 550, 9
+34, chance, prøv lykken, 0, 0, 0
+35, Plot, Nygade, 6400, 600, 9
+36, ShippingLine, RØDBY-PUTTGARDEN, 4000, 0, 2
+37, chance, prøv lykken, 0, 0, 0
+38, Plot, Frederiksberggade, 7000, 700, 10
+39, Tax, Ekstra ordinær statsskat betal kr. 2000, 2000, 0, 0
+40, Plot, Rådhuspladsen, 8000, 1000, 10
