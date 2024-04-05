@@ -1,26 +1,16 @@
+import org.w3c.dom.ls.LSOutput;
+
 import java.util.Random;
 
 public class Dice {
 
     public boolean isDouble;
-    Random rand = new Random();
-    int dice1 = rand.nextInt(1,6);
-    int dice2 = rand.nextInt(1,6);
 
-
-
-    public int rollDiceSum(){
-        int sum = dice1 + dice2;
-        return sum;
-
-
+    public int rollDiceSum() {
+        Random rand = new Random();
+        int die1 = rand.nextInt(6) + 1;
+        int die2 = rand.nextInt(6) + 1;
+        isDouble = die1 == die2;
+        return die1 + die2;
     }
-
-    public boolean isDouble(){
-        return dice1 == dice2;
-
-    }
-
-
-
 }
