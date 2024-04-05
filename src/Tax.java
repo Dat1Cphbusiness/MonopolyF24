@@ -1,5 +1,5 @@
-public class Taxes extends Prison{
-    public Taxes(int id, String label, int cost, int income) {
+public class Tax extends Prison{
+    public Tax(int id, String label, int cost, int income) {
         super(id, label, cost, income);
     }
 
