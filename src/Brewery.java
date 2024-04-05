@@ -1,6 +1,6 @@
 public class Brewery extends Business{
-    public Brewery(int id, String label, int cost, int income) {
-        super(id, label, cost, income);
+    public Brewery(int id, String label, int cost, int income, int serieID) {
+        super(id, label, cost, income, serieID);
     }
 
     @Override

@@ -1,6 +1,6 @@
 public class ShippingLine extends Business{
-    public ShippingLine(int id, String label, int cost, int income) {
-        super(id, label, cost, income);
+    public ShippingLine(int id, String label, int cost, int income, int serieID) {
+        super(id, label, cost, income, serieID);
     }
 
     @Override
