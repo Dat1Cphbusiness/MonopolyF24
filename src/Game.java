@@ -12,9 +12,7 @@ public class Game {
 
     private int maxPlayers = 6;
 
-
     private Player currentPlayer;
-
 
     private Board board;
     private CardDeck cardDeck;
