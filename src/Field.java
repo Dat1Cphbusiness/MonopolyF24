@@ -33,4 +33,7 @@ public class Field {
         return "";
     }
 
+    public int getCost() {
+        return cost;
+    }
 }

@@ -6,7 +6,7 @@ public class  Player {
     private Account account;
     private int position;
 
-    public Player(String name, int balance){
+    public Player(String name, int balance) {
         this.name = name;
 
         deeds = new ArrayList<>();
@@ -20,8 +20,8 @@ public class  Player {
         this.account.deposit(balance);
     }
 
-    public String toString(){
-        return this.name +", "+this.account.getBalance();
+    public String toString() {
+        return this.name + ", " + this.account.getBalance();
     }
 
     public int getBalance() {
@@ -32,8 +32,44 @@ public class  Player {
         return name;
     }
 
-    public int updatePosition(int value){
+    public int updatePosition(int value) {
         this.position += value;
         return position;
+    }
+
+
+    public boolean buyProperty(Field f) {
+
+        boolean buySucced = account.withdraw(f.getCost());
+
+        return buySucced;
+    }
+
+    public boolean pay(int amount) {
+        boolean succedPay = account.withdraw(amount);
+        return succedPay;
+    }
+
+    public void receive(int amount) {
+
+        account.deposit(amount);
+    }
+
+    public boolean pay(int amount, Player recipient) {
+        boolean payReceived = account.withdraw(amount);
+        recipient.receive(amount);
+        {
+            return payReceived;
+        }
+
+    }
+
+    public void collect(int amount){
+
+        for (Player p : Game.getPlayers()) {
+
+            p.pay(amount, this);
+
+        }
     }
 }

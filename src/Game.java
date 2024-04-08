@@ -1,8 +1,9 @@
 import java.util.ArrayList;
 
 public class Game {
+
     private String name;
-    private ArrayList<Player> players;
+    private static ArrayList<Player> players;
     private ArrayList<String> listOfActions;
     private TextUI ui;
     private FileIO io;
@@ -161,4 +162,9 @@ public class Game {
     public Player getCurrentPlayer() {
         return currentPlayer;
     }
+
+    public static ArrayList<Player> getPlayers() {
+        return players;
+    }
+
 }
