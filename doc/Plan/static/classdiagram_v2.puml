@@ -100,6 +100,7 @@ class Player{
 + String getName()
 + int getBalance()
 + int getPosition()
++ int getTotalValue()
 }
 class Account{
 - int balance

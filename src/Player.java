@@ -45,6 +45,7 @@ public class  Player {
     public boolean buyProperty(Field f){
         f.getCost();
         boolean success = this.account.withdraw(f.getCost());
+        if (success) this.deeds.add(f);
         return success;
 
     }
@@ -73,6 +74,14 @@ public class  Player {
         }
 
 
+    }
+
+    public int getTotalValue() {
+        int sum= getBalance();
+        for (Field d : this.deeds) {
+            sum += d.getCost();
+        }
+        return sum;
     }
 
 
