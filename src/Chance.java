@@ -28,7 +28,7 @@ public class Chance extends Field{
                 p.receive(this.income);
                 msg = "Du har modtaget penge.";
                 break;
-            case "collect":
+            case "rewardFromPlayers":
                 p.collect(this.income);
                 msg = "Du har modtaget penge fra alle.";
                 break;
