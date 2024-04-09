@@ -1,15 +1,26 @@
-public class Tax extends Prison{
+public class Tax extends Field{
     public Tax(int id, String label, int cost, int income) {
         super(id, label, cost, income);
     }
 
     @Override
-    protected String onAccept(Player p) {
-        return super.onAccept(p);
+    public String onLand(Player p) {
+        String msg = super.onLand(p);
+        msg += "Skat trækker et beløb svarende til 10% af dine aktiver.\n"
+            +  "Vil du hellere betale et fast beløb på " + this.cost + "kr? Y/N";
+        return msg;
+    }
+    @Override
+    public String onAccept(Player p) {
+        p.pay(cost);
+        return "Du har betalt din SKAT <3";
     }
 
     @Override
-    protected String onReject(Player p) {
-        return super.onReject(p);
+    public String onReject(Player p) {
+        int toPay = (int)(p.getBalance()*0.1);
+
+        p.pay(toPay);
+        return "Du har betalt 10% SKAT, svarende til " + toPay + "kr.";
     }
 }

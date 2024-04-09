@@ -24,9 +24,9 @@ I anledningen af Kongens fødselsdag benådes De herved for fængsel. Dette kort
 I anledningen af Kongens fødselsdag benådes De herved for fængsel. Dette kort kan opbevares indtil De får brug for det eller De kan sælge det., 0, 0, joker
 Gå i fængsel. Ryk direkte til fængslet. Selvom om De passerer "START" indkasserer De ikke kr. 4.000, 0, 0, joker
 Gå i fængsel. Ryk direkte til fængslet. Selvom om De passerer "START" indkasserer De ikke kr. 4.000, 0, 0, joker
-Ryk frem til START, 4000, 0, reward
-Ryk frem til START, 4000, 0, reward
-Ryk tre felter tilbage, 0, 0, joker
+Ryk frem til START, 4000, 0, joker
+Ryk frem til START, 4000, 0, joker
+Ryk tre felter tilbage, 0, 0, -3
 De modtager Deres aktiebytte modtag 1.000 kr. af banken, 1000, 0, reward
 Modtag udbytte af Deres aktier, 1000, 0, reward
 Modtag udbytte af Deres aktier, 1000, 0, reward
