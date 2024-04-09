@@ -27,7 +27,6 @@ public class Tax extends Prison{
     @Override
     public String onLand(Player p) {
         String s = super.onLand(p);
-
         s += "\n Vil du betale fast beløb på " + this.getCost() + "kr? Tast j for Ja \n ( Ellers trækker vi et beløb der svare til 10% af dine aktiver)";
         return s;
 
