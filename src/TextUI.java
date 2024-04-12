@@ -20,7 +20,16 @@ public class TextUI {
         //promptBinary(msg, "0", "1");
         //todo check at der tastes enten y eller n
         // lav rekursivt kald hvis det er noget tredje
-
+        String input = promptText(msg);
+        if(input.equalsIgnoreCase(option1)){
+            return option1;
+        }else if(input.equalsIgnoreCase(option2)){
+            return option2;
+        }else {
+            System.out.println("Forkert input prøv igen");
+            promptBinary(msg, option1, option2);
+        }
+        return null;
     }
     public int promptNumeric(String msg){
         String input = promptText(msg);         //Give brugere et sted at placere sit svar og vente pÃ¥ svaret

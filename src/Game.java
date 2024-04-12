@@ -142,7 +142,7 @@ public class Game {
 
             ui.displayMsg("Det er "+currentPlayer.getName()+"'s tur");
             throwAndMove();
-            input = ui.promptText("Fortsæt? Y/N: ");
+            input = ui.promptBinary("Fortsæt? Y/N", "Y", "N");
             count++;
             if(count == players.size()){
                 count = 0;
