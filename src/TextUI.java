@@ -20,8 +20,8 @@ public class TextUI {
         //promptBinary(msg, "0", "1");
         //todo check at der tastes enten y eller n
         // lav rekursivt kald hvis det er noget tredje
-        System.out.println(msg);
-        String input = scan.nextLine();
+
+        String input = promptText(msg);
         if (input.equalsIgnoreCase(option1) || input.equalsIgnoreCase(option2)) {
             return input;
         } else {
