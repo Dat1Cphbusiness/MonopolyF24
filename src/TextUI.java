@@ -17,11 +17,17 @@ public class TextUI {
         return input;
     }
     public String promptBinary(String msg, String option1, String option2 ){
-        //promptBinary(msg, "0", "1");
-        //todo check at der tastes enten y eller n
-        // lav rekursivt kald hvis det er noget tredje
+        String input = promptText(msg);
 
+        if((input.equalsIgnoreCase(option1)  || input.equalsIgnoreCase(option2))){
+
+        } else{
+            displayMsg("ugyldig svar, prøv igen");
+            promptBinary(msg, option1, option2);
+        }
+        return input;
     }
+
     public int promptNumeric(String msg){
         String input = promptText(msg);         //Give brugere et sted at placere sit svar og vente pÃ¥ svaret
         int number = Integer.parseInt(input);       //Konvertere svaret til et tal
