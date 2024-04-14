@@ -163,6 +163,7 @@ public class Game extends PApplet{
             // if currentPlayer diceDoubleCount == 3, i fængsel
 
             ui.displayMsg("Det er "+currentPlayer.getName()+"'s tur");
+            setProcessFlag(true);
             throwAndMove();
             input = ui.promptBinary("Fortsæt? Y/N: ", "Y", "N");
             count++;
@@ -178,7 +179,7 @@ public class Game extends PApplet{
 
             ui.displayMsg(currentPlayer.getName()+" slog "+dice.getDice()[0] +" og "+dice.getDice()[1]);
             int newPosition = currentPlayer.updatePosition(result);
-            Field f = board.getField(newPosition);
+            Field f = board.getField(3);
 
             landAndAct(f);
     }
@@ -186,15 +187,15 @@ public class Game extends PApplet{
      public void landAndAct(Field f){
 
          String msg = f.onLand(currentPlayer);
-
+         boolean response = true;
          if(processFlag) {
-            boolean response = ui.promptBinary(msg, "Y", "N");
-            msg = f.processResponse(response, currentPlayer);
-            ui.displayMsg(msg);
-          }else{
+            response = ui.promptBinary(msg, "Y", "N");
+         }else{
              ui.displayMsg(msg);
          }
-
+         msg = f.processResponse(response, currentPlayer);
+         ui.displayMsg(msg);
+         ui.displayMsg(currentPlayer.toString());
      }
 
     public Player getCurrentPlayer() {
