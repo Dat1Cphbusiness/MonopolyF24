@@ -4,7 +4,7 @@ Ryk tre felter frem, 0, 0, 3
 Ryk brikken frem til det næste rederi og betal ejeren 2 gange den leje han ellers er berettiget til. Hvis selskabet ikke ejes af nogen kan De købe det af banken., 0, 0, joker
 Ryk brikken frem til det næste rederi og betal ejeren 2 gange den leje han ellers er berettiget til. Hvis selskabet ikke ejes af nogen kan De købe det af banken., 0, 0, joker
 Tag ind på Rådhuspladsen., 0, 0, 40
-Ryk frem til Frederiksberg Alle. Hvis De passerer "START" indkassér da kr. 4.000, 0, 0, 38
+Ryk frem til Frederiksberggade. Hvis De passerer "START" indkassér da kr. 4.000, 0, 0, 38
 Ryk frem til Vimmelskaftet. Hvis De passerer "START" indkassér da kr. 4.000, 0, 0, 33
 Ryk frem til Strandvejen. Hvis De passerer "START" indkassér da kr. 4.000, 0, 0, 20
 Ryk frem til Grønningnen. Hvis De passerer "START" indkassér da kr. 4.000, 0, 0, 25
@@ -24,8 +24,8 @@ I anledningen af Kongens fødselsdag benådes De herved for fængsel. Dette kort
 I anledningen af Kongens fødselsdag benådes De herved for fængsel. Dette kort kan opbevares indtil De får brug for det eller De kan sælge det., 0, 0, joker
 Gå i fængsel. Ryk direkte til fængslet. Selvom om De passerer "START" indkasserer De ikke kr. 4.000, 0, 0, joker
 Gå i fængsel. Ryk direkte til fængslet. Selvom om De passerer "START" indkasserer De ikke kr. 4.000, 0, 0, joker
-Ryk frem til START, 4000, 0, reward
-Ryk frem til START, 4000, 0, reward
+Ryk frem til START, 0, 0, 1
+Ryk frem til START, 0, 0, 1
 Ryk tre felter tilbage, 0, 0, joker
 De modtager Deres aktiebytte modtag 1.000 kr. af banken, 1000, 0, reward
 Modtag udbytte af Deres aktier, 1000, 0, reward
