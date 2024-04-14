@@ -27,6 +27,7 @@ public class TextUI {
         }else if(input.equalsIgnoreCase(reject)){
             return false;
         }else{
+            System.out.println("OBS! Tast enten '" + accept + "' eller '" + reject+"'");
             return promptBinary(msg,accept, reject);
         }
 
@@ -46,9 +47,11 @@ public class TextUI {
     }
 
   public void displayMsg(String msg){
-      System.out.println("\n***************");
-      System.out.println(msg);
-      System.out.println("***************\n");
+        if(msg!=null) {
+            System.out.println("\n***************");
+            System.out.println(msg);
+            System.out.println("***************\n");
+        }
   }
 
 }
