@@ -43,11 +43,11 @@ public class Field {
     }
 
     protected String onAccept(Player p) {
-        return "Du tastede Y \n ";
+        return p.getName()+" accepterede \n ";
     }
 
     protected String onReject(Player p) {
-        return "Du tasted N \n";
+        return p.getName()+" afviste \n";
     }
 
     public String getLabel() {
