@@ -18,12 +18,13 @@ public class Property extends Field {
         String msg = super.onLand(p);
         if(owner == null){
           if(  p.hasSufficientFunds(this.getCost())) {
-              Main.getCurrentGame().setProcessFlag(true);
+
               this.setOption("buy");
               msg += "\nVil du købe " + super.getLabel() + " til " + this.getCost() + "? (Y/N)";
           }else{
               msg += "\nDu har ikke midlerne til denne grund";
               Main.getCurrentGame().setProcessFlag(false);
+              this.setOption(null);
                   // Todo:
                   // Tjek om spilleren ejer nogen ejendomme
                   // this.setOption("pawn");
@@ -31,26 +32,29 @@ public class Property extends Field {
                   // hvis ikke, sæt ejendommmen på auktion
           }
         }else if(owner != p){
+            Main.getCurrentGame().setProcessFlag(false);
             this.setOption("payRent");
-            msg += "\nDu skal betale " + super.getIncome() + ". Indforstået Y/N";
+            msg += "\nDu skal betale " + super.getIncome() + ". Indforstået? (Y/N)";
         }
         return msg;
     }
 
     @Override
     protected String onAccept(Player p) {
-        String msg = "";
-        if (this.getOption().equalsIgnoreCase("buy")){
+        if(this.getOption() !=null) {
+            String msg = super.onAccept(p);
 
-              p.buyProperty(this);
-              msg = "Du har købt "+this.getLabel();
-              this.owner = p;
-
-        }else if (this.getOption().equalsIgnoreCase("payRent")){
-            msg ="Du har betalt til "+this.owner; //Evt ændre fra label til ejer af "Deed"
-            p.pay(this.getIncome(),owner);
+            if (this.getOption().equalsIgnoreCase("buy")) {
+                p.buyProperty(this);
+                msg += p.getName() + " har købt " + this.getLabel();
+                this.owner = p;
+            } else if (this.getOption().equalsIgnoreCase("payRent")) {
+                msg = p.getName() + " har betalt husleje til " + this.owner.getName(); //Evt ændre fra label til ejer af "Deed"
+                p.pay(this.getIncome(), owner);
+            }
+            return msg;
         }
-        return msg;
+        return null;
     }
 
     @Override
