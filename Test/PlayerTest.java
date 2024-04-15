@@ -19,9 +19,19 @@ public class PlayerTest {
     @Test
     public void updatePosition() {
         Player p = game.getPlayers().get(0);
+        // given the player is in position 1,
+        // when asked to moved 3 steps back,
+        // then the player should be in position 38
 
-        int actual =  p.updatePosition(12);
-        int expected = 14;
+        int actual =  p.updatePosition(-3);
+        int expected = 38;
+        assertEquals(expected, actual);
+
+        // given the player is in position 38,
+        // when asked to moved 10 steps forward,
+        // then the player should be in position 7
+        actual =  p.updatePosition(10);
+        expected = 8;
         assertEquals(expected, actual);
 
 

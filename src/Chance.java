@@ -22,10 +22,14 @@ public class Chance extends Field{
     public String onAccept(Player p){
 
         String msg = "";
-                try {
-                    int steps = Math.abs(p.getPosition() - Integer.parseInt(this.getOption()));
+        try {
+               int value = Integer.parseInt(this.getOption());
+               int steps = 0;
+               if(value > 0) {
+                   steps = Math.abs(p.getPosition() - value);//afstanden fra spillerens position til det felt der skal rykkes til
 
-                    p.updatePosition(steps);
+                }
+                p.updatePosition(value);
                 }catch(NumberFormatException e){
                     switch (this.getOption()) {
                         case "payment":

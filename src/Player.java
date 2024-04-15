@@ -38,6 +38,8 @@ public class  Player {
         if(position > 40){
             this.pay(Main.getCurrentGame().getBoard().getField(1).getCost());
             position-=40;
+        } else if (position<0) {
+            position += 40;
         }
         return position;
     }
